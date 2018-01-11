@@ -44,13 +44,13 @@ int GetMostGold(int n, int w, int* g, int* p)
 		{
 			if (j < p[i])
 			{
-				results[j-1] = preResults[j-1];
+				results[j-1] = preResults[j-1]; // 这里j=1 表示有几个工人，但是preResults的索引是从0开始，所以要-1
 			}
 			else
 			{
 				int a = preResults[j-1];
 				int b = g[i];
-				if (j - p[i] - 1 >= 0)
+				if (j - p[i] - 1 >= 0) //这里做一下判断，是为了防止 j 和 p[i] 相等的情况出现
 				{
 					b = preResults[j - p[i] - 1] + g[i];
 				}
