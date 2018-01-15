@@ -2,5 +2,6 @@
 
 void main()
 {
-	TestGetMostGold();
+	//TestGetMostGold();
+	Test_Get01PackageAnswer();
 }
